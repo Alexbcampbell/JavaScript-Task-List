@@ -73,3 +73,16 @@
 // document.querySelector('li:nth-child(3)').style.color = 'yellow';
 
 // document.querySelector('li:nth-child(3)').textContent = 'Hello';
+
+//get element by className
+
+const items = document.getElementsByClassName('collection-item')
+
+console.log(items);
+console.log(items[0]);
+items[0].style.color = 'red';
+items[3].textContent = 'Hello';
+
+const listItems = document.querySelector('ul').getElementsByClassName('collection-item');
+
+console.log(listItems)
