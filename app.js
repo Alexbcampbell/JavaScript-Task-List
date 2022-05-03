@@ -226,52 +226,88 @@
 //Replace element
 
 //Create element
-const newHeading = document.createElement('h2');
-//Add ID
-newHeading.id = 'task-title';
-//New text node
-newHeading.appendChild(document.createTextNode('Task List'));
+// const newHeading = document.createElement('h2');
+// //Add ID
+// newHeading.id = 'task-title';
+// //New text node
+// newHeading.appendChild(document.createTextNode('Task List'));
 
-//Get old heading
-const oldHeading = document.getElementById('task-title');
-//Parent
-const cardAction = document.querySelector('.card-action');
+// //Get old heading
+// const oldHeading = document.getElementById('task-title');
+// //Parent
+// const cardAction = document.querySelector('.card-action');
 
-//Replace
-cardAction.replaceChild(newHeading, oldHeading);
-// console.log(newHeading);
+// //Replace
+// cardAction.replaceChild(newHeading, oldHeading);
+// // console.log(newHeading);
 
-//Remove element
-const lis  = document.querySelectorAll('li');
-const list = document.querySelector('ul');
+// //Remove element
+// const lis  = document.querySelectorAll('li');
+// const list = document.querySelector('ul');
 
-//remove list item
-lis[0].remove();
+// //remove list item
+// lis[0].remove();
 
-//remove child element
-list.removeChild(lis[2]);
+// //remove child element
+// list.removeChild(lis[2]);
 
-//Classes & attributes
-const firstLi = document.querySelector('li:first-child');
-const link = firstLi.children[0];
+// //Classes & attributes
+// const firstLi = document.querySelector('li:first-child');
+// const link = firstLi.children[0];
 
-let val;
+// let val;
 
-//classes
-val = link.className;
-val = link.classList;
-val = link.classList[0];
-link.classList.add('test');
-link.classList.remove('test');
-val = link;
+// //classes
+// val = link.className;
+// val = link.classList;
+// val = link.classList[0];
+// link.classList.add('test');
+// link.classList.remove('test');
+// val = link;
 
-//attributes
-val = link.getAttribute('href')
-val = link.setAttribute('href', 'http://google.com');
-link.setAttribute('title', 'Google');
-val = link.hasAttribute('title');
-link.removeAttribute('title');
-val = link;
+// //attributes
+// val = link.getAttribute('href')
+// val = link.setAttribute('href', 'http://google.com');
+// link.setAttribute('title', 'Google');
+// val = link.hasAttribute('title');
+// link.removeAttribute('title');
+// val = link;
 
 
-console.log(val)
+// console.log(val)
+
+// document.querySelector('.clear-tasks').addEventListener('click', 
+// function(e) {
+// console.log('HELLO WORLD')
+// e.preventDefault();
+// });
+
+document.querySelector('.clear-tasks').addEventListener('click', onClick);
+
+function onClick(e) {
+    let val;
+
+    val = e;
+
+    //event target element
+    val = e.target;
+    val = e.target.id;
+    val = e.target.className;
+    val = e.target.classList;
+
+    //event type
+    val = e.type;
+
+    //timestamp
+    val = e.timeStamp;
+
+    //coords event relative to the window
+    val = e.clientY;
+    val = e.clientX;
+
+    //coords event relative to the element
+    val = e.offsetY;
+    val = e.offsetX;
+
+    console.log(val)
+}
