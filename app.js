@@ -312,32 +312,63 @@
 //     console.log(val)
 // }
 
-const clearBtn = document.querySelector('.clear-tasks')
-const card = document.querySelector('.card')
-const heading = document.querySelector('h5')
+// const clearBtn = document.querySelector('.clear-tasks')
+// const card = document.querySelector('.card')
+// const heading = document.querySelector('h5')
 
-// clearBtn.addEventListener('click', runEvent);
+// // clearBtn.addEventListener('click', runEvent);
 
-// clearBtn.addEventListener('dblclick', runEvent)
+// // clearBtn.addEventListener('dblclick', runEvent)
 
-// clearBtn.addEventListener('mousedown', runEvent)
-// clearBtn.addEventListener('mouseup', runEvent)
-// clearBtn.addEventListener('mouseenter', runEvent)
-// clearBtn.addEventListener('mouseleave', runEvent)
+// // clearBtn.addEventListener('mousedown', runEvent)
+// // clearBtn.addEventListener('mouseup', runEvent)
+// // clearBtn.addEventListener('mouseenter', runEvent)
+// // clearBtn.addEventListener('mouseleave', runEvent)
 
-// clearBtn.addEventListener('mouseover', runEvent)
-// clearBtn.addEventListener('mouseout', runEvent)
+// // clearBtn.addEventListener('mouseover', runEvent)
+// // clearBtn.addEventListener('mouseout', runEvent)
 
-card.addEventListener('mousemove', runEvent)
-card.addEventListener('mouse', runEvent)
+// card.addEventListener('mousemove', runEvent)
+// card.addEventListener('mouse', runEvent)
 
 
 
-//event handler
+// //event handler
+// function runEvent(e){
+//     console.log(`EVENT TYPE: ${e.type}`);
+
+//     heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`
+
+//     document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY}, 40 )`;
+// }
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+const heading = document.querySelector('h5');
+//clear input
+taskInput.value = '';
+
+// form.addEventListener('submit', runEvent);
+
+// taskInput.addEventListener('keydown', runEvent);
+
+// taskInput.addEventListener('keyup', runEvent);
+// taskInput.addEventListener('keypress', runEvent);
+// taskInput.addEventListener('focus', runEvent);
+// taskInput.addEventListener('blur', runEvent);
+// taskInput.addEventListener('cut', runEvent);
+// taskInput.addEventListener('paste', runEvent);
+// taskInput.addEventListener('input', runEvent);
+
+
 function runEvent(e){
-    console.log(`EVENT TYPE: ${e.type}`);
+    console.log(`EVENT TYPE: ${e.type}`)
 
-    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`
+    console.log(e.target.value);
 
-    document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY}, 40 )`;
+    // heading.innerText = e.target.value;
+    // //get input value
+    // console.log(taskInput.value);
+
+    // e.preventDefault();
 }
