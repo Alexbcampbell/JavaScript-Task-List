@@ -282,32 +282,62 @@
 // e.preventDefault();
 // });
 
-document.querySelector('.clear-tasks').addEventListener('click', onClick);
+// document.querySelector('.clear-tasks').addEventListener('click', onClick);
 
-function onClick(e) {
-    let val;
+// function onClick(e) {
+//     let val;
 
-    val = e;
+//     val = e;
 
-    //event target element
-    val = e.target;
-    val = e.target.id;
-    val = e.target.className;
-    val = e.target.classList;
+//     //event target element
+//     val = e.target;
+//     val = e.target.id;
+//     val = e.target.className;
+//     val = e.target.classList;
 
-    //event type
-    val = e.type;
+//     //event type
+//     val = e.type;
 
-    //timestamp
-    val = e.timeStamp;
+//     //timestamp
+//     val = e.timeStamp;
 
-    //coords event relative to the window
-    val = e.clientY;
-    val = e.clientX;
+//     //coords event relative to the window
+//     val = e.clientY;
+//     val = e.clientX;
 
-    //coords event relative to the element
-    val = e.offsetY;
-    val = e.offsetX;
+//     //coords event relative to the element
+//     val = e.offsetY;
+//     val = e.offsetX;
 
-    console.log(val)
+//     console.log(val)
+// }
+
+const clearBtn = document.querySelector('.clear-tasks')
+const card = document.querySelector('.card')
+const heading = document.querySelector('h5')
+
+// clearBtn.addEventListener('click', runEvent);
+
+// clearBtn.addEventListener('dblclick', runEvent)
+
+// clearBtn.addEventListener('mousedown', runEvent)
+// clearBtn.addEventListener('mouseup', runEvent)
+// clearBtn.addEventListener('mouseenter', runEvent)
+// clearBtn.addEventListener('mouseleave', runEvent)
+
+// clearBtn.addEventListener('mouseover', runEvent)
+// clearBtn.addEventListener('mouseout', runEvent)
+
+card.addEventListener('mousemove', runEvent)
+card.addEventListener('mouse', runEvent)
+
+
+
+//event handler
+function runEvent(e){
+    console.log(`EVENT TYPE: ${e.type}`);
+
+    heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`
+
+    document.body.style.backgroundColor = `rgb(${e.offsetX},${e.offsetY}, 40 )`;
 }
